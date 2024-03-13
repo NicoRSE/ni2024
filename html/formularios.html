@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <header>
+        <h1>Formulario</h1>
+    </header>
+
+    <main>
+        <section>
+            <!-- Los formularios son para enviar información-->
+            <fieldset>
+                <legend>Datos personales</legend>
+                <form action="./resultados.html">
+                    <!-- Input: varios tipos-->
+                    <div>
+                        <label for="nombre">Nombre</label>
+                        <input maxlenght="5" 
+                        id="nombre"
+                        placeholder="Nicolas"
+                        name="nombre"
+                        required> 
+                    </div>
+
+                    <div>
+                        <label for="edad">Edad</label>
+                        <input type="number" 
+                        id="edad" 
+                        min="0" 
+                        max="120"
+                        name="edad">
+                        <label for="mes">Mes</label>
+                        <input type="number" 
+                        id="mes" 
+                        min="1" 
+                        max="11"
+                        name="mes"> 
+                    </div>
+
+                    <div>
+                        <label for="fechaNacimiento">Fecha de nacimiento</label>
+                        <input type="date" 
+                        value="2000-08-03"
+                        name="date">
+                    </div>
+
+                    <div>
+                        <label for="foto">Foto</label>
+                        <input type="file"
+                        name="file" 
+                        >
+                    </div>
+                    
+                    <div>
+                        <label for="tel">Telefono:</label>
+                        <input type="tel"
+                        id="tel"
+                        name="telefono"
+                        placeholder="ej AAA-BBBBBBBB"
+                        pattern="[0-9]{3}-[0-9]{8}">
+                    </div>
+
+                    <div>
+                        <label for="nacionalidad">Nacionalidad</label>
+                        <select name="nacionalidad"
+                        id="nacionalidad"
+                        required>
+                            <option value="" selected>Seleccione</option>
+                            <option value="1">Argentina</option>
+                            <option value="2">Brasil</option>
+                            <option value="3">Chile</option>
+                            <option value="4">Paraguay</option>
+                            <option value="5">Uruguay</option>
+                        </select> 
+                    </div>
+                    <!--Terminos y condiciones-->
+                    <div>
+                    </div>
+                    <div>
+                        <label>Seleccione SI si acepta los términos y condiciones:</label>
+                        <span>SI</span>
+                        <input type="radio" 
+                        name="tc" 
+                        value="si">
+                        <span>NO</span>
+                        <input type="radio" 
+                        name="tc" 
+                        value="no">
+                    </div>
+                    <div>
+                        <label>¿Acepta los términos y condiciones?</label>
+                        <input type="checkbox" 
+                        name="tc2" 
+                        value="si"
+                        required>
+                    </div>
+                    <div>
+                        <label>Turno:</label>
+                        <div>
+                            <label>Mañana</label>
+                            <input type="radio" 
+                            name="turno" 
+                            value="manana">
+                            <label>Tarde</label>
+                            <input type="radio" 
+                            name="turno" 
+                            value="tarde">
+                            <label>Noche</label>
+                            <input type="radio" 
+                            name="turno" 
+                            value="noche">
+                        </div>
+                    </div>
+                    <div>
+                        <button>
+                            Enviar
+                        </button>
+                        <button type="reset">
+                            Limpiar formulario
+                        </button>
+                    </div>
+                </form>
+            </fieldset>
+        </section>
+        <section>
+            <fieldset>
+                <form method="post">
+                    <h3>Login</h3>
+                    <div>
+                        <label>Usuario</label>
+                        <input type="text" 
+                        name="usuario"
+                        required>
+                    </div>
+                    <div>
+                        <label>Contraseña</label>
+                        <input type="password" 
+                        name="password"
+                        required>
+                    </div>
+                    <button>
+                        Login
+                    </button>
+                </form>
+            </fieldset>
+        </section>
+    </main>
+</body>
+</html>
